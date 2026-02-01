@@ -63,12 +63,12 @@ def analyze_csv(file_path):
         })
 
         summary = {
-            "total_equipment": len(df),
+            "total_equipment": int(len(df)),
             "avg_flowrate": float(df["Flowrate"].mean()) if not df["Flowrate"].isnull().all() else 0.0,
             "avg_pressure": float(df["Pressure"].mean()) if not df["Pressure"].isnull().all() else 0.0,
             "avg_temperature": float(df["Temperature"].mean()) if not df["Temperature"].isnull().all() else 0.0,
             "avg_health_score": float(df['Health_Score'].mean()),
-            "equipment_type_distribution": df["Type"].value_counts().to_dict(),
+            "equipment_type_distribution": {str(k): int(v) for k, v in df["Type"].value_counts().to_dict().items()},
             "health_scores": df[['Equipment Name', 'Health_Score']].rename(columns={'Equipment Name': 'name', 'Health_Score': 'health_score'}).to_dict('records'),
             "equipment_data": renamed_df.where(pd.notnull(renamed_df), None).to_dict('records')
         }

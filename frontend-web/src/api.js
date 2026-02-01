@@ -5,7 +5,7 @@ import axios from 'axios';
  * Handles automatic attachment of the Authorization header from localStorage.
  */
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api/',
+    baseURL: 'http://localhost:8000/api/',
 });
 
 // Initialize token from localStorage if it exists
