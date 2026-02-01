@@ -13,27 +13,27 @@ Developed by **Aerin Patel** for the Intern Screening Task.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The system follows a modern decoupled architecture, with a centralized Django REST API serving both web and desktop clients.
 
 ```mermaid
 graph TD
     subgraph "Clients (Frontends)"
-        Web["🌐 React Web Dashboard"]
-        Desktop["🖥️ PyQt5 Desktop App"]
+        Web["React Web Dashboard"]
+        Desktop["PyQt5 Desktop App"]
     end
 
     subgraph "Backend (Django Service)"
-        API["🔌 REST API (DRF)"]
-        Parser["📄 CSV Data Parser (Pandas)"]
-        Analytics["📊 Analytics Engine (Pandas/NumPy)"]
-        Reporter["🖨️ PDF Generator (ReportLab)"]
+        API["REST API (DRF)"]
+        Parser["CSV Data Parser (Pandas)"]
+        Analytics["Analytics Engine (Pandas/NumPy)"]
+        Reporter["PDF Generator (ReportLab)"]
     end
 
     subgraph "Storage & Data"
-        DB[("🗄️ SQLite Database")]
-        FS["📁 File Storage"]
+        DB[("SQLite Database")]
+        FS["File Storage"]
     end
 
     %% Flow
@@ -50,7 +50,7 @@ graph TD
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Unified Backend API
 - **Django REST Framework**: Built a robust API layer for seamless data flow.
@@ -76,7 +76,7 @@ graph TD
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Python Django, Django REST Framework, Pandas, SQLite.
 - **Frontend (Web)**: React.js, Vite, Tailwind CSS, Chart.js, Framer Motion.
@@ -85,7 +85,7 @@ graph TD
 
 ---
 
-## 🚥 Getting Started
+## Getting Started
 
 ### 1. Clone & Setup Backend
 ```bash
@@ -113,7 +113,7 @@ python main.py
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Endpoint | Method | Description |
 | :--- | :--- | :--- |
@@ -124,10 +124,10 @@ python main.py
 
 ---
 
-## 📊 Sample Data Format
+## Sample Data Format
 The application expects a CSV with the following columns:
 `Equipment Name`, `Type`, `Flowrate`, `Pressure`, `Temperature`
 
 ---
 
-Built with precision and ❤️ by **Aerin Patel**.
+Built with precision and dedication by **Aerin Patel**.
